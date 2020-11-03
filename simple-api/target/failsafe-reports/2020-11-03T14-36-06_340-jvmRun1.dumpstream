@@ -1,0 +1,29 @@
+# Created at 2020-11-03T14:36:17.484
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2020-11-03T14:36:17.506
+Unexpected IOException with stream: 2020-11-03 14:36:17.506  WARN 4363 --- [containers-ryuk] o.testcontainers.utility.ResourceReaper  : Can not connect to Ryuk at localhost:32772
+
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:503) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:492) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:648) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:597) ~[na:na]
+	at java.base/java.net.Socket.<init>(Socket.java:520) ~[na:na]
+	at java.base/java.net.Socket.<init>(Socket.java:294) ~[na:na]
+	at org.testcontainers.utility.ResourceReaper.lambda$null$1(ResourceReaper.java:121) ~[testcontainers-1.13.0.jar:na]
+	at org.rnorth.ducttape.ratelimits.RateLimiter.doWhenReady(RateLimiter.java:27) ~[duct-tape-1.0.8.jar:na]
+	at org.testcontainers.utility.ResourceReaper.lambda$start$2(ResourceReaper.java:119) ~[testcontainers-1.13.0.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+
+
