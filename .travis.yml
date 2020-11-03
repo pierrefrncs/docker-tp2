@@ -2,7 +2,7 @@ language: java
 script:
 #Test and Build app with docker
 - cd ./simple-api/
-- mvn clean verify org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=devops-2020
+- mvn clean verify org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=pierrefrncs_docker-tp2
 - cd ..
 
 #Connexion à Docker
@@ -27,5 +27,5 @@ service:
 
 addons:
  sonarcloud:
-  organization: "devops-epf"
+  organization: "pierrefrncs"
   token: "$SONARCLOUD_TOKEN"
