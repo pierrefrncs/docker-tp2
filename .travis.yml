@@ -4,17 +4,17 @@ script:
 - mvn clean verify --file ./simple-api/pom.xml
 
 #Connexion à Docker
-- docker login $DOCKER_USERNAME $DOCKER_PASSWORD
+- docker login -u $DOCKER_USERNAME $DOCKER_PASSWORD
 
 #Build
-- docker build -t $DOCKER_USERNAME/docker-tp2/simple-api .
-- docker build -t $DOCKER_USERNAME/docker-tp2/database .
-- docker build -t $DOCKER_USERNAME/docker-tp2/httpd .
+- docker build -t $DOCKER_USERNAME/docker-tp2/simple-api simple-api
+- docker build -t $DOCKER_USERNAME/docker-tp2/database database
+- docker build -t $DOCKER_USERNAME/docker-tp2/httpd httpd
 
 #Push sur Docker Hub
-- docker push $DOCKER_USERNAME/docker-tp2/simple-api
-- docker push $DOCKER_USERNAME/docker-tp2/database
-- docker push $DOCKER_USERNAME/docker-tp2/database
+- docker push $DOCKER_USERNAME/devops:docker-tp2_simple-api
+- docker push $DOCKER_USERNAME/devops:docker-tp2_database 
+- docker push $DOCKER_USERNAME/devops:docker-tp2_database
 
 cache:
  directories:
