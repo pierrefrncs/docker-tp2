@@ -1,4 +1,24 @@
 language: java
 script:
-- cd ./simple-api/
-- mvn clean verify
+#Test and Build app with docker
+- mvn clean verify --file ./simple-api/pom.xml
+
+#Connexion à Docker
+- docker login $DOCKER_USERNAME $DOCKER_PASSWORD
+
+#Build
+- docker build -t $DOCKER_USERNAME/docker-tp2/simple-api .
+- docker build -t $DOCKER_USERNAME/docker-tp2/database .
+- docker build -t $DOCKER_USERNAME/docker-tp2/httpd .
+
+#Push sur Docker Hub
+- docker push $DOCKER_USERNAME/docker-tp2/simple-api
+- docker push $DOCKER_USERNAME/docker-tp2/database
+- docker push $DOCKER_USERNAME/docker-tp2/database
+
+cache:
+ directories:
+ - $HOME/.m2
+
+service: 
+- docker
