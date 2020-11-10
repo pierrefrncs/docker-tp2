@@ -1,0 +1,3 @@
+- name: Launch network
+  docker_network:
+    name: app-network

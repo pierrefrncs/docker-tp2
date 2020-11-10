@@ -1,0 +1,11 @@
+- name: Launch database
+  docker_container:
+    name: database
+    image: pierrefrncs/devops:database
+    state: started
+    networks:
+      - name: app-network
+    env:
+      POSTGRES_PASSWORD=pwd
+      POSTGRES_USER=usr
+      POSTGRES_DB=db

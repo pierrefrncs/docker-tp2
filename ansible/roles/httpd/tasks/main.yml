@@ -1,0 +1,9 @@
+- name: Launch proxy
+  docker_container:
+    name: reverse_proxy
+    image: pierrefrncs/devops:httpd
+    state: started
+    ports:
+      - 80:80
+    networks:
+      - name: app-network
