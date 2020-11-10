@@ -1,7 +1,8 @@
 - name: Launch database
   docker_container:
     name: database
-    image: pierrefrncs/devops:database
+    image: pierrefrncs/devops:docker_tp2_database
+    pull: yes
     state: started
     networks:
       - name: app-network

@@ -1,7 +1,8 @@
 - name: Launch proxy
   docker_container:
     name: reverse_proxy
-    image: pierrefrncs/devops:httpd
+    image: pierrefrncs/devops:docker_tp2_httpd
+    pull: yes 
     state: started
     ports:
       - 80:80

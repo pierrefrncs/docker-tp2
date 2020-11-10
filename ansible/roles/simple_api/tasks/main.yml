@@ -1,12 +1,11 @@
 - name: Launch app
   docker_container:
     name: backend
-    image: pierrefrncs/devops:simple-api
+    image: pierrefrncs/devops:docker_tp2_simple_api
+    pull: yes 
     state: started
     networks:
       - name: app-network
-        links:
-          - database
     env:
       SPRING_DATASOURCE_USERNAME=usr
       SPRING_DATASOURCE_PASSWORD=pwd
