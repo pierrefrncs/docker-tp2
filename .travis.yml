@@ -1,7 +1,7 @@
 language: java
 script:
 #Test and Build app with docker
-- cd ./simple-api/
+- cd ./simple_api/
 - mvn clean verify org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=pierrefrncs_dev2020
 - cd ..
 
