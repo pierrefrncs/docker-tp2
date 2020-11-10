@@ -9,14 +9,14 @@ script:
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 #Build
-- docker build -t $DOCKER_USERNAME/devops:docker-tp2_simple-api simple-api
-- docker build -t $DOCKER_USERNAME/devops:docker-tp2_database database
-- docker build -t $DOCKER_USERNAME/devops:docker-tp2_httpd httpd
+- docker build -t $DOCKER_USERNAME/devops:docker_tp2_simple_api simple_api
+- docker build -t $DOCKER_USERNAME/devops:docker_tp2_database database
+- docker build -t $DOCKER_USERNAME/devops:docker_tp2_httpd httpd
 
 #Push sur Docker Hub
-- docker push $DOCKER_USERNAME/devops:docker-tp2_simple-api
-- docker push $DOCKER_USERNAME/devops:docker-tp2_database
-- docker push $DOCKER_USERNAME/devops:docker-tp2_httpd
+- docker push $DOCKER_USERNAME/devops:docker_tp2_simple_api
+- docker push $DOCKER_USERNAME/devops:docker_tp2_database
+- docker push $DOCKER_USERNAME/devops:docker_tp2_httpd
 
 cache:
  directories:
