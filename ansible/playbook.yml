@@ -3,7 +3,7 @@
   become: yes
 
   roles:
-    #- docker
+    - docker
     - network
     - database
     - simple_api

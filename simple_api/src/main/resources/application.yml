@@ -14,9 +14,9 @@ spring:
     driver-class-name: org.postgresql.Driver
 
 management​:
- ​server​:
- ​ add-application-context-header​: false
- ​endpoints​:
- ​ web​:
- ​ exposure​:
- ​  include​: health,info,env,metrics,beans,configprops
+ ​ server​:
+   ​ add-application-context-header​: false
+  endpoints​:
+   ​ web​:
+     ​ exposure​:
+       ​  include​: health,info,env,metrics,beans,configprops
